@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 
 const TravelForm = () => {
-    const [location, setLocation] = useState('');
+    const [destination, setDestination] = useState('');
     const [interests, setInterests] = useState('');
     const [favoriteFood, setFavoriteFood] = useState('');
     const [plan, setPlan] = useState('');
@@ -11,7 +11,7 @@ const TravelForm = () => {
         e.preventDefault();
         try {
             const response = await axios.post('http://127.0.0.1:5000/generate-plan', {
-                location,
+                destination,
                 interests,
                 favorite_food: favoriteFood,
             });
@@ -26,9 +26,9 @@ const TravelForm = () => {
             <form onSubmit={handleSubmit}>
                 <input
                     type="text"
-                    placeholder="Enter your location"
-                    value={location}
-                    onChange={(e) => setLocation(e.target.value)}
+                    placeholder="Enter your Destination"
+                    value={destination}
+                    onChange={(e) => setDestination(e.target.value)}
                 />
                 <input
                     type="text"

@@ -18,7 +18,7 @@ print(os.getenv("OPENAI_API_KEY"))
 @app.route('/generate-plan', methods=['POST'])
 def generate_plan():
     data = request.json
-    location = data.get('location')
+    destination = data.get('destination')
     interests = data.get('interests')
     favorite_food = data.get('favorite_food')
 
@@ -29,7 +29,7 @@ def generate_plan():
         messages=[
             {
                 "role": "user",
-                "content": f"Plan a travel itinerary for someone in {location} who loves {interests} and enjoys eating {favorite_food}.",
+                "content": f"Plan a travel itinerary for someone in {destination} who loves {interests} and enjoys eating {favorite_food}.",
             }
         ],
     )
