@@ -1,0 +1,8 @@
+flask
+flask-cors
+openai
+# or for FastAPI:
+fastapi
+uvicorn
+fastapi-cors
+openai

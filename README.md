@@ -1,4 +1,4 @@
-# traigency
+# travel-ai-gency
 
 App Description: AI Travel Planner
 
@@ -21,4 +21,3 @@ Key Features:
 	•	Save time with instant, AI-generated itineraries.
 	•	Explore new places you never knew existed within your budget.
 	•	Perfect for spontaneous trips or meticulously planned adventures.
-
