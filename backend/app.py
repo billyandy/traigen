@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 app = Flask(__name__)
-CORS(app, origins=["https://demo.d2xl874wvepzjb.amplifyapp.com"])
+CORS(app)
 client = OpenAI(
     api_key= os.getenv("OPENAI_API_KEY")
 )
@@ -34,7 +34,7 @@ def generate_plan():
         ],
     )
         
-
+    print("Request sent. ")
     return jsonify({'plan': str(response.choices[0].message.content).strip()})
 
 if __name__ == '__main__':
