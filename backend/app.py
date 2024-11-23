@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, origins=["https://demo.d2xl874wvepzjb.amplifyapp.com"])
 client = OpenAI(
     api_key= os.getenv("OPENAI_API_KEY")
 )
