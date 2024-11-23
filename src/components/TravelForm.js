@@ -10,7 +10,7 @@ const TravelForm = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('https://demo.d2xl874wvepzjb.amplifyapp.com//generate-plan', {
+            const response = await axios.post('http://demo.d2xl874wvepzjb.amplifyapp.com/generate-plan', {
                 destination,
                 interests,
                 favorite_food: favoriteFood,
